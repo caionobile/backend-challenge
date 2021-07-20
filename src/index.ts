@@ -6,6 +6,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import mongoose from "mongoose";
+import videos from "./routes/video";
 dotenv.config();
 
 /**
@@ -43,3 +44,7 @@ app.use(express.json());
 app.listen(PORT, () => {
   console.log(`Listening to port: ${PORT}`);
 });
+
+app.use("/api/videos", videos);
+
+export default app;
