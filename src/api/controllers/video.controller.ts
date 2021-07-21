@@ -48,8 +48,8 @@ export const replaceVideoById = async (
 ): Promise<Response> => {
   try {
     await video.findOneAndReplace({ _id: req.params.id }, { ...req.body });
-    const videoUpdated = await video.findById(req.params.id);
-    return res.status(200).json(videoUpdated);
+    const videoReplaced = await video.findById(req.params.id);
+    return res.status(200).json(videoReplaced);
   } catch (e: any) {
     return res.status(404).json({ error: e.message });
   }
