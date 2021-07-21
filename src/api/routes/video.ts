@@ -1,4 +1,4 @@
-import { Router, Request, Response } from "express";
+import { Router } from "express";
 /* import { getVideos } from "@controllers/video.controller"; */
 import { getVideos } from "../controllers/video.controller";
 
