@@ -14,7 +14,7 @@
     "esModuleInterop": true,
     "baseUrl": "./src",
     "paths": {
-      "@model/*": ["api/models/*"],
+      "@models/*": ["api/models/*"],
       "@services/*": ["api/services/*"],
       "@controllers/*": ["api/controllers/*"],
       "@middlewares/*": ["api/middlewares/*"],
