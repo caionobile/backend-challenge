@@ -6,7 +6,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import mongoose from "mongoose";
-import videos from "./routes/video";
+import videos from "./api/routes/video";
 dotenv.config();
 
 /**
@@ -27,7 +27,7 @@ mongoose
   .then(() => {
     console.log("Connection OK");
   })
-  .catch((e) => {
+  .catch((e: any) => {
     console.log(e);
   });
 
