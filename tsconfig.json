@@ -1,24 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "module": "commonjs",
     "declaration": true,
+    "allowJs": true,
     "noImplicitAny": true,
     "removeComments": true,
     "experimentalDecorators": true,
-    "rootDir": ".",
+    "emitDecoratorMetadata": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
     "sourceMap": true,
     "listFiles": true,
     "newLine": "LF",
     "noEmitOnError": true,
     "esModuleInterop": true,
     "baseUrl": "./src",
+    "lib": ["es6"],
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
     "paths": {
       "@models/*": ["api/models/*"],
       "@services/*": ["api/services/*"],
       "@controllers/*": ["api/controllers/*"],
       "@middlewares/*": ["api/middlewares/*"],
-      "@routes/*": ["api/routes/*"],
+      "@routes/*": ["api/routes/*"]
     }
   }
 }
