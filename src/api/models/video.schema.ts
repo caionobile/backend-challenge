@@ -1,9 +1,9 @@
-import mongoose from "mongoose";
+import {Schema, model} from "mongoose";
 
-const videoSchema = new mongoose.Schema({
+const videoSchema = new Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
   url: { type: String, required: true },
 });
 
-export default mongoose.model("Video", videoSchema);
+export default model("Video", videoSchema);
