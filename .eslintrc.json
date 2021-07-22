@@ -40,7 +40,7 @@
     "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
     "no-empty-function": 2,
     "no-new": 0,
-    "max-len": ["error", { "code": 80, "ignoreStrings": true }],
+    /* "max-len": ["error", { "code": 80, "ignoreStrings": true }], */
     "no-nested-ternary": "off",
     "linebreak-style": ["error", "windows"]
   }
