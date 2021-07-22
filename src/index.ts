@@ -7,6 +7,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
 import videos from '@routes/video';
+import mid from '@middlewares/index';
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ mongoose
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
+app.use(mid);
 
 /**
  * Server Activation
