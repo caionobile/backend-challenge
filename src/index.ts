@@ -1,31 +1,32 @@
 /**
  * Required External Modules
  */
-import * as dotenv from "dotenv";
-import express from "express";
-import cors from "cors";
-import helmet from "helmet";
-import mongoose from "mongoose";
-import videos from "./api/routes/video";
+import * as dotenv from 'dotenv';
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import mongoose from 'mongoose';
+import videos from '@routes/video';
+
 dotenv.config();
 
 /**
  * App Variables
  */
-const PORT: number = parseInt(process.env.PORT as string, 10) || 3000;
+const PORT: number = parseInt(process.env.PORT, 10) || 3000;
 const app = express();
 
 /**
  * MongoDB Connection
  */
 mongoose
-  .connect(process.env.MONGO_CONNECTION_STRING as string, {
+  .connect(process.env.MONGO_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
   .then(() => {
-    console.log("Connection OK");
+    console.log('Connection OK');
   })
   .catch((e: any) => {
     console.log(e);
@@ -45,6 +46,6 @@ app.listen(PORT, () => {
   console.log(`Listening to port: ${PORT}`);
 });
 
-app.use("/api/videos", videos);
+app.use('/api/videos', videos);
 
 export default app;

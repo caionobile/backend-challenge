@@ -1,5 +1,5 @@
-import video from "../models/video.schema";
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
+import video from '@models/video.schema';
 
 export const getVideos = async (
   req: Request,
@@ -61,6 +61,6 @@ export const deleteVideoById = async (
 ): Promise<Response> => {
   if (await video.findById(req.params.id)) {
     await video.findByIdAndRemove({ _id: req.params.id });
-    return res.status(200).json({ message: "Video deleted" });
-  } else return res.status(404).json({ message: "Video not found" });
+    return res.status(200).json({ message: 'Video deleted' });
+  } return res.status(404).json({ message: 'Video not found' });
 };
